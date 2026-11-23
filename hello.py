@@ -8,7 +8,7 @@ def greet(name: str, excited: bool = False) -> str:
 
     excited=True 时用感叹号，方便练习"改一行代码触发一次 CI"。
     """
-    name = name.strip() or "world"
+    name = name.strip() or "你好"
     end = "!" if excited else "."
     return f"hi {name}{end}"
 

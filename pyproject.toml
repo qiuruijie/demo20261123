@@ -1,0 +1,12 @@
+[project]
+name = "git-practice"
+version = "0.1.0"
+description = "练手仓库：走一遍 分支 -> PR -> CI -> 合并 -> CD"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

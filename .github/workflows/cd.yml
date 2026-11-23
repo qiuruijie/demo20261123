@@ -1,0 +1,24 @@
+name: CD
+
+# 只在合并进 main 之后触发：模拟"合并即部署"
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy (模拟)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 假装部署
+        run: |
+          echo "deploy ok"
+          echo "分支: ${{ github.ref_name }}"
+          echo "提交: ${{ github.sha }}"
+          echo "触发人: ${{ github.actor }}"

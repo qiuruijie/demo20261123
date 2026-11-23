@@ -1,4 +1,5 @@
 """练手用的小文件：只有一个函数和一个入口。"""
+import sys
 
 GREETING = "hello, ci/cd"
 
